@@ -1,0 +1,107 @@
+/* Reset básico para quitar márgenes y aplicar box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo base del body: fuente, fondo claro, color principal */
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Estilo cuando el body tiene la clase .dark (modo oscuro) */
+body.dark {
+  background: #121212;
+  color: #f4f6f8;
+}
+
+/* Título principal */
+h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Contenedor principal del conversor */
+.converter {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+/* Contenedor en modo oscuro */
+body.dark .converter {
+  background: #1e1e1e;
+}
+
+/* Inputs y selects: estilo base */
+input, select {
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+/* Efecto focus */
+input:focus, select:focus {
+  border-color: #007bff;
+}
+
+/* Botones: estilo base */
+button {
+  padding: 12px;
+  font-size: 1rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Hover en botón principal */
+button:hover {
+  background: #0056b3;
+}
+
+/* Resultado de la conversión */
+#result {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Botón modo oscuro: diseño diferente */
+#toggleTheme {
+  margin-top: 20px;
+  background: none;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Hover en botón modo oscuro */
+#toggleTheme:hover {
+  background: #007bff;
+  color: #fff;
+}
+
